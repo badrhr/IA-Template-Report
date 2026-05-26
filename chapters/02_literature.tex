@@ -1,0 +1,208 @@
+% ================================================================
+% CHANGES MADE TO THIS FILE:
+% [FIX 1] Added a proper introductory paragraph at the top of the chapter.
+%         Previously the chapter jumped straight into a list with no opening 
+%         context — every chapter should open with a short paragraph explaining 
+%         what the chapter covers before diving into sections.
+% [FIX 2] Added \section{Organising Your Literature Review} — the most 
+%         important section was completely missing. The old template only 
+%         explained citation syntax but gave no guidance on HOW to actually 
+%         structure and write a literature review (thematic vs chronological, 
+%         synthesis vs summary). This is the weakest chapter in the original 
+%         template and this section addresses that gap.
+% [FIX 3] Added \section{Synthesis and Critical Analysis} — students need 
+%         explicit guidance on the difference between summarising a paper 
+%         and critically synthesising multiple sources.
+% [FIX 4] The citation examples section title was "Example of in-text citation 
+%         of references in LaTeX" — this is a technical/LaTeX guidance section, 
+%         not literature review content. It has been renamed and repositioned 
+%         as a clearly labelled technical reference section so students 
+%         understand it is a writing tool, not a content section.
+% [FIX 5] Improved the Summary section — it was a one-line placeholder.
+%         Replaced with a structured closing paragraph.
+% ================================================================
+
+\chapter{Literature Review}
+\label{ch:lit_rev}
+
+% [FIX 1] Added introductory paragraph — was completely missing in original.
+This chapter reviews the existing literature relevant to the investigated problem. 
+It situates the project within the current state of the art, identifies gaps in 
+existing knowledge, and demonstrates the significance and motivation of this work. 
+The review is organised as follows: Section~\ref{sec:lit_organisation} provides 
+guidance on structuring a literature review; Section~\ref{sec:lit_synthesis} 
+discusses critical analysis and synthesis; Section~\ref{sec:lit_citation} covers 
+referencing and citation conventions; and Section~\ref{sec:lit_plagiarism} 
+addresses plagiarism avoidance.
+
+\noindent A literature review chapter might contain the following:
+\begin{enumerate}
+    \item A review of the state-of-the-art (include theories and solutions) of 
+    the field of research.
+    \item A description of the project in the context of existing literature 
+    and products/systems.
+    \item An analysis of how the review is relevant to the intended 
+    application/system/problem.
+    \item A critique of existing work compared with the intended work.
+\end{enumerate}
+Note that your literature review should demonstrate the significance of the project.
+
+% ================================================================
+% [FIX 2] NEW SECTION — was completely absent from the original template.
+\section{Organising Your Literature Review}
+\label{sec:lit_organisation}
+% ================================================================
+
+A literature review is not a list of paper summaries. It must be organised 
+around ideas, themes, or arguments — not around individual papers. There are 
+two main organisational strategies:
+
+\begin{itemize}
+    \item \textbf{Thematic organisation (recommended):} Group sources by topic, 
+    concept, or research theme. For example, one section may review methods for 
+    feature extraction, another for classification, and another for evaluation 
+    benchmarks. This approach shows the reader the landscape of ideas and how 
+    they relate to each other.
+
+    \item \textbf{Chronological organisation:} Arrange sources from earliest to 
+    most recent to show how the field has evolved over time. This is useful when 
+    the development of a concept over time is central to your argument.
+\end{itemize}
+
+\noindent Regardless of the structure chosen, each section of your literature 
+review should:
+\begin{itemize}
+    \item Open with a sentence that states what the section is about.
+    \item Discuss multiple sources together and compare them, rather than 
+    describing each paper in isolation.
+    \item End with a sentence that connects the reviewed material to your 
+    own project.
+\end{itemize}
+
+% ================================================================
+% [FIX 3] NEW SECTION — was completely absent from the original template.
+\section{Synthesis and Critical Analysis}
+\label{sec:lit_synthesis}
+% ================================================================
+
+The most important skill in a literature review is synthesis: combining 
+information from multiple sources to build a coherent argument, rather than 
+simply summarising each paper in turn. 
+
+\begin{itemize}
+    \item \textbf{Summarising} (avoid as a primary mode): ``Smith (2020) proposed 
+    method X. Jones (2021) proposed method Y. Lee (2022) proposed method Z.''
+
+    \item \textbf{Synthesising} (aim for this): ``Several methods have been 
+    proposed for X, including approach A \citep{lamport1994latex}, approach B 
+    \citep{kottwitzlatex2021}, and approach C. While A and B share the assumption 
+    that..., C differs by... However, none of these approaches address the problem 
+    of..., which is the gap this project targets.''
+\end{itemize}
+
+\noindent Critical analysis means evaluating the strengths and weaknesses of 
+existing work — not just reporting what was done. For each group of sources, ask:
+\begin{itemize}
+    \item What are the key assumptions made, and are they justified?
+    \item What are the limitations of the proposed methods?
+    \item How do the results compare across different studies?
+    \item What remains unresolved or contested in the literature?
+\end{itemize}
+
+% ================================================================
+% [FIX 4] Renamed section from "Example of in-text citation of references 
+%         in LaTeX" to a clearer title that signals it is a technical guide.
+\section{Citation and Referencing Guide}
+\label{sec:lit_citation}
+% ================================================================
+
+The references in a report relate your content with the relevant sources, papers, 
+and the works of others. To include references in a report, we \textit{cite} them 
+in the text. In \LaTeX, the most convenient way is to use BibTeX, which takes 
+references in a particular format [see \texttt{references.bib} file of this 
+template] and formats them in the required style (APA, Harvard, IEEE, etc.) 
+with the help of appropriate packages.
+
+Take note of the commands \textbackslash cite\{\} and \textbackslash citep\{\}. 
+The command \textbackslash cite\{\} produces ``Author et al. (2019)'' style for 
+Harvard/APA. The command \textbackslash citep\{\} produces ``(Author et al., 2019).'' 
+Depending on how you construct a sentence, use them appropriately. 
+This Department recommends the \textbf{Harvard style} of referencing.
+
+\begin{itemize}
+    \item \cite{kottwitzlatex2021} has written a comprehensive guide on writing 
+    in \LaTeX~[Example of \textbackslash cite\{\}].
+    \item If \LaTeX~is used efficiently and effectively, it helps in writing a 
+    very high-quality project report~\citep{lamport1994latex}~[Example of 
+    \textbackslash citep\{\}].
+    \item A detailed APA, Harvard, and Chicago referencing style guide are 
+    available in~\citep{uor_refernce_style}.
+\end{itemize}
+
+\noindent This is an example of a numbered list with in-text citations:
+\begin{enumerate}
+    \item \cite{kottwitzlatex2021} has written a comprehensive guide on writing 
+    in \LaTeX.
+    \item If \LaTeX~is used efficiently and effectively, it helps in writing a 
+    very high-quality project report~\citep{lamport1994latex}.
+\end{enumerate}
+
+\subsection{Reference Resources}
+\label{subsec:reflinks}
+You can find additional referencing resources from the University Library:
+\begin{itemize}
+    \item \url{https://libguides.reading.ac.uk/computer-science}
+    \item \url{https://libguides.reading.ac.uk/citing-references/citationexamples}
+\end{itemize}
+
+\subsection{Changing Bibliography Styles}
+While this report uses name-and-date formatting in the Harvard style, you may 
+also wish to use a numbered style such as IEEE. To enable this, edit the 
+\path{CS_report.sty} file. Uncomment the 2 lines of Harvard settings under 
+\texttt{Bibliography/References settings}, and enable the IEEE style:
+
+\begin{verbatim}
+% IEEE, Numbered Style
+\usepackage[numbers]{natbib}
+\bibliographystyle{IEEEtran}
+\end{verbatim}
+
+Note that when making this change, you will need to modify the way in which 
+you refer to authors by name using \verb|\citeauthor{}|.
+
+% ================================================================
+\section{Avoiding Unintentional Plagiarism}
+\label{sec:lit_plagiarism}
+% ================================================================
+
+Using other sources, ideas, and material always carries a risk of unintentional 
+plagiarism.
+
+\noindent
+\textbf{\color{red}MUST}: Read the university guidelines on the definition of 
+plagiarism as well as the guidelines on how to avoid 
+it~\citep{uor_plagiarism}.
+
+% ================================================================
+\section{Critique of the Review}
+\label{sec:lit_critique}
+% ================================================================
+
+Describe your main findings and evaluation of the literature. What are the key 
+gaps, contradictions, or open problems identified through your review? How does 
+this project address one or more of these gaps?
+
+% ================================================================
+% [FIX 5] Summary section was a one-line placeholder. 
+%         Replaced with a structured closing paragraph.
+\section{Summary}
+\label{sec:lit_summary}
+% ================================================================
+
+% [FIX 5] Original was just: "Write a summary of this chapter"
+% Replaced with a structured template that mirrors other chapters.
+This chapter reviewed the existing literature relevant to [state the topic of 
+your project]. The review identified that [summarise the key themes covered]. 
+It was found that [state the main gap or limitation in existing work] which 
+motivates the approach adopted in this project. The following chapter, 
+Chapter~\ref{ch:method}, describes the methodology used to address this gap.

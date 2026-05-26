@@ -1,0 +1,212 @@
+% ================================================================
+% CHANGES MADE TO THIS FILE:
+% [FIX 1] Added a proper introductory paragraph at the top of the chapter.
+%         The original had no opening paragraph — it jumped straight into 
+%         bullet points with no context sentence for the chapter.
+% [FIX 2] Removed the inline note "What happened when you removed each 
+%         component." from the Ablation Study section. This was a loose 
+%         developer note left outside any comment block, which would appear 
+%         as visible body text in the compiled PDF.
+% [FIX 3] Merged \section{Summary of Results} (Section 4.5) and 
+%         \section{Summary} (Section 4.6) into a single \section{Summary}.
+%         The original file had both, which was redundant. The summary table 
+%         from 4.5 is retained inside the unified Summary section.
+% [FIX 4] Added a forward reference in the Summary to Chapter 5 using 
+%         \ref{ch:evaluation} for consistency with other chapters.
+% ================================================================
+
+\chapter{Results}
+\label{ch:results}
+
+% [FIX 1] Added introductory paragraph — was missing in the original.
+This chapter presents the results obtained by applying the methodology described 
+in Chapter~\ref{ch:method}. The findings are arranged in a logical sequence, 
+progressing from overall algorithm performance to data-driven findings, and 
+concluding with the ablation study. Each result is directly linked to a specific 
+objective or research question stated in Chapter~\ref{ch:into}.
+
+\noindent The results chapter tells a reader about your findings based on the 
+methodology you have used to solve the investigated problem. For example:
+\begin{itemize}
+    \item If your project aims to implement an algorithm for its analysis, the
+    results may be the performance of the algorithm obtained using a relevant
+    experiment design.
+
+    \item If your project aims to solve some problems/research questions over a
+    collected dataset, the results may be the findings obtained using the applied
+    tools/algorithms/etc.
+\end{itemize}
+
+% ================================================================
+\section{How to Present Your Results}
+\label{sec:how-to-present}
+% ================================================================
+
+Arrange your results and findings in a logical sequence. Use a bottom-up approach
+by first presenting raw or processed outputs, then progressively building toward
+interpretation. Each result should directly correspond to an objective or research
+question stated in your introduction.
+
+When presenting your results, keep the following principles in mind:
+\begin{itemize}
+    \item \textbf{Be objective:} Report what you observed without over-interpreting.
+    Save deeper analysis for the Discussion chapter.
+
+    \item \textbf{Be precise:} Use exact numerical values, units, and statistical
+    measures (e.g., accuracy, F1-score, RMSE) where applicable.
+
+    \item \textbf{Be complete:} Report both positive and negative findings.
+    Unexpected or poor results are equally important and should not be omitted.
+
+    \item \textbf{Be consistent:} Use the same notation and terminology throughout
+    to ensure clarity.
+\end{itemize}
+
+% ================================================================
+\section{Algorithm Performance Results}
+\label{sec:algorithm-results}
+% ================================================================
+
+If your project involves the implementation or evaluation of an algorithm, report
+its measured performance directly. Table~\ref{tab:results-metrics} presents the
+quantitative results obtained across the evaluated configurations.
+
+\begin{table}[ht]
+    \centering
+    \caption{Performance results of the proposed algorithm.}
+    \label{tab:results-metrics}
+    \begin{tabular}{lcccc}
+        \hline
+        \textbf{Model / Configuration} & \textbf{Accuracy (\%)} &
+        \textbf{Precision (\%)} & \textbf{Recall (\%)} & \textbf{F1-Score (\%)} \\
+        \hline
+        Baseline                        & --   & --   & --   & --   \\
+        Proposed Algorithm              & --   & --   & --   & --   \\
+        Variant A                       & --   & --   & --   & --   \\
+        Variant B                       & --   & --   & --   & --   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Figure~\ref{fig:perf-comparison} provides a visual comparison of the obtained
+results across all evaluated configurations.
+
+\begin{figure}[ht]
+    \centering
+    % \includegraphics[width=0.75\textwidth]{figures/performance_comparison.png}
+    \caption{Comparison of algorithm performance across evaluated configurations.}
+    \label{fig:perf-comparison}
+\end{figure}
+
+% ================================================================
+\section{Data-Driven Findings}
+\label{sec:data-findings}
+% ================================================================
+
+If your project addresses research questions over a collected dataset, present
+the findings obtained from applying your analytical methods. Each finding should
+directly answer a specific research question or objective.
+
+\paragraph{Research Question 1: [State RQ1 here]}
+[Describe the finding that answers RQ1. Reference the relevant table or figure.]
+
+\paragraph{Research Question 2: [State RQ2 here]}
+[Describe the finding that answers RQ2. Reference the relevant table or figure.]
+
+\paragraph{Research Question 3: [State RQ3 here]}
+[Describe the finding that answers RQ3. Reference the relevant table or figure.]
+
+\noindent Use the most appropriate visualisation to support each finding:
+\begin{itemize}
+    \item \textbf{Bar/pie charts} --- categorical distributions or group comparisons.
+    \item \textbf{Line plots} --- trends over time or across parameter values.
+    \item \textbf{Scatter plots} --- relationships between continuous variables.
+    \item \textbf{Heatmaps / confusion matrices} --- classification performance
+    or correlation structure.
+    \item \textbf{Box plots} --- statistical spread and outlier detection.
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    % \includegraphics[width=0.75\textwidth]{figures/findings_plot.png}
+    \caption{[Caption describing the main finding illustrated by this figure.]}
+    \label{fig:findings}
+\end{figure}
+
+% ================================================================
+\section{Ablation Study}
+\label{sec:ablation}
+% ================================================================
+
+% [FIX 2] Removed the loose developer note "What happened when you removed 
+%         each component." which was visible body text in the original file.
+%         Replaced with a proper introductory sentence for the section.
+To assess the contribution of each component of the proposed approach, an ablation
+study was conducted by systematically removing or replacing individual components
+and measuring the impact on overall performance.
+Table~\ref{tab:ablation} reports the results obtained for each ablated variant
+compared to the full model.
+
+\begin{table}[ht]
+    \centering
+    \caption{Ablation study results: performance of each model variant.}
+    \label{tab:ablation}
+    \begin{tabular}{lcccc}
+        \hline
+        \textbf{Model Variant} & \textbf{Accuracy (\%)} & \textbf{Precision (\%)}
+        & \textbf{Recall (\%)} & \textbf{F1-Score (\%)} \\
+        \hline
+        Full Model (Proposed)       & -- & -- & -- & -- \\
+        w/o Component A             & -- & -- & -- & -- \\
+        w/o Component B             & -- & -- & -- & -- \\
+        w/o Component C             & -- & -- & -- & -- \\
+        Baseline (no components)    & -- & -- & -- & -- \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Figure~\ref{fig:ablation} illustrates the performance drop associated with the
+removal of each individual component relative to the full model.
+
+\begin{figure}[ht]
+    \centering
+    % \includegraphics[width=0.75\textwidth]{figures/ablation_study.png}
+    \caption{Performance drop per removed component relative to the full model.}
+    \label{fig:ablation}
+\end{figure}
+
+% ================================================================
+% [FIX 3] Merged old Section 4.5 "Summary of Results" and Section 4.6 
+%         "Summary" into a single unified \section{Summary}.
+%         The summary table is retained here as it belongs in the summary.
+\section{Summary}
+\label{sec:results-summary}
+% ================================================================
+
+% [FIX 3] Original had two separate sections doing the same job.
+%         Now unified: the overview table is followed by a closing paragraph.
+Table~\ref{tab:results-summary} provides a concise overview of the key results
+obtained, mapped to each project objective or research question, including the
+ablation study findings.
+
+\begin{table}[ht]
+    \centering
+    \caption{Summary of results mapped to project objectives.}
+    \label{tab:results-summary}
+    \begin{tabular}{p{4cm} p{5cm} p{4cm}}
+        \hline
+        \textbf{Objective / RQ} & \textbf{Method / Tool Applied} &
+        \textbf{Key Result} \\
+        \hline
+        Objective 1             & [Method used]                  & [Result obtained] \\
+        Objective 2             & [Method used]                  & [Result obtained] \\
+        Objective 3             & [Method used]                  & [Result obtained] \\
+        Ablation Study          & Component removal              & [Key finding]     \\
+        \hline
+    \end{tabular}
+\end{table}
+
+% [FIX 4] Added structured closing sentence with cross-reference to Chapter 5.
+The results presented in this chapter are further interpreted and contextualised
+in Chapter~\ref{ch:evaluation}, where they are discussed in relation to the
+existing literature and the initial research objectives.

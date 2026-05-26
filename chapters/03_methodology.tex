@@ -1,0 +1,391 @@
+% ================================================================
+% CHANGES MADE TO THIS FILE:
+% [FIX 1] Added a proper introductory paragraph at the top of the chapter.
+%         The original jumped straight into content with no opening context.
+% [FIX 2] Fixed typo in Table 3.1: "Refection" → "Reflection" 
+%         (was misspelled in the original template).
+% [FIX 3] Moved \subsection{Ethical considerations} out from under 
+%         \section{Examples of the sections...} and made it a proper 
+%         standalone \section{}. Ethics is not an "example" — it is a 
+%         required section of the Methodology chapter.
+% [FIX 4] Added \section{Summary} with a proper label and structured text.
+%         The original summary was present but had no \label{} and contained 
+%         only a placeholder "Write a summary of this chapter."
+% ================================================================
+
+\chapter{Methodology}
+\label{ch:method}
+
+% [FIX 1] Added introductory paragraph — was missing in the original.
+This chapter describes the methodology adopted to address the research objectives 
+stated in Chapter~\ref{ch:into}. It outlines the overall report structure, 
+describes the experimental design, presents the implementation details, and 
+addresses the ethical considerations relevant to this project.
+
+% ================================================================
+\section{Report Structure and Methodology Type}
+\label{sec:method_structure}
+% ================================================================
+
+A project report's structure can follow different paradigms depending on the 
+type of project. Table~\ref{tab:gen_template} summarises the general report 
+structure used in this template.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Undergraduate report template structure}
+    \label{tab:gen_template}
+    \begin{tabular}{llll}
+        \toprule
+        \multirow{7}{3cm}{Frontmatter}
+        & & Title Page & \\
+        & & Abstract &    \\
+        & & Acknowledgements & \\
+        & & Table of Contents &    \\
+        & & List of Figures   &    \\
+        & & List of Tables    &    \\
+        & & List of Abbreviations  &    \\
+        & &   &    \\
+        \multirow{7}{3cm}{Main text}
+        & Chapter 1 & Introduction   &    \\
+        & Chapter 2 & Literature Review   &    \\
+        & Chapter 3 & Methodology   &    \\
+        & Chapter 4 & Results    &    \\
+        & Chapter 5 & Discussion and Analysis  &    \\
+        & Chapter 6 & Conclusions and Future Work  &    \\
+        & Chapter 7 & Reflection  &    \\ % [FIX 2] Was: "Refection" (typo fixed)
+        & &   &    \\
+        \multirow{2}{3cm}{End matter}
+        & & References  &    \\
+        & & Appendices (Optional)  &    \\
+        & & Index (Optional)  &    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Example of an Algorithm Analysis Main Text Structure}
+\label{subsec:algo_struct}
+Some projects involve the implementation of a state-of-the-art algorithm and 
+its performance analysis and comparison with other algorithms. In that case, 
+the suggestion in Table~\ref{tab:algo_temp} may suit you best.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Example of an algorithm analysis type report structure}
+    \label{tab:algo_temp}
+    \begin{tabular}{lll}
+        \toprule
+        Chapter 1 & Introduction  &    \\
+        Chapter 2 & Literature Review  &    \\
+        Chapter 3 & Methodology   &    \\
+        &               & Algorithms descriptions  \\
+        &               & Implementations   \\
+        &               & Experiments design   \\
+        Chapter 4 & Results       &  \\
+        Chapter 5 & Discussion and Analysis  &    \\
+        Chapter 6 & Conclusion and Future Work  &    \\
+        Chapter 7 & Reflection  &    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Example of an Application Type Main Text Structure}
+\label{subsec:app_struct}
+If you are applying some algorithms/tools/technologies on some 
+problems/datasets/etc., you may use the structure in Table~\ref{tab:app_temp}.
+
+\begin{table}[!ht]
+    \centering
+    \caption{Example of an application type report structure}
+    \label{tab:app_temp}
+    \begin{tabular}{lll}
+        \toprule
+        Chapter 1 & Introduction  &    \\
+        Chapter 2 & Literature Review  &    \\
+        Chapter 3 & Methodology   &    \\
+        &               & Problems (tasks) descriptions  \\
+        &               & Algorithms/tools/technologies/etc. descriptions  \\
+        &               & Implementations   \\
+        &               & Experiments design and setup   \\
+        Chapter 4 & Results       &  \\
+        Chapter 5 & Discussion and Analysis  &    \\
+        Chapter 6 & Conclusion and Future Work  &    \\
+        Chapter 7 & Reflection  &    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Example of a Science Lab-Type Main Text Structure}
+\label{subsec:lab_struct}
+If you are doing a science lab experiment type of project, you may use the 
+methodology section suggested in Table~\ref{tab:lab_temp}. In this kind of 
+project, you may refer to the ``Methodology'' chapter as ``Materials and Methods.''
+
+\begin{table}[!ht]
+    \centering
+    \caption{Example of a science lab experiment-type report structure}
+    \label{tab:lab_temp}
+    \begin{tabular}{lll}
+        \toprule
+        Chapter 1 & Introduction  &    \\
+        Chapter 2 & Literature Review  &    \\
+        Chapter 3 & Materials and Methods   &    \\
+        &               & Problems (tasks) description  \\
+        &               & Materials \\
+        &               & Procedures  \\
+        &               & Implementations   \\
+        &               & Experiment set-up   \\
+        Chapter 4 & Results       &  \\
+        Chapter 5 & Discussion and Analysis  &    \\
+        Chapter 6 & Conclusion and Future Work  &    \\
+        Chapter 7 & Reflection  &    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+% ================================================================
+% [FIX 3] Ethical Considerations promoted from \subsection to \section.
+%         It was nested under "Examples of the sections..." which made it 
+%         look optional. Ethics is a required standalone section.
+\section{Ethical Considerations}
+\label{sec:ethics}
+% ================================================================
+
+% [FIX 3] Was: \subsection{Ethical considerations} under the structure section.
+This section addresses the ethical aspects of your project. Consider all 
+dimensions that apply to your work:
+
+\begin{itemize}
+    \item \textbf{Informed Consent:} If data was collected from participants, 
+    detail the process for obtaining consent and ensuring participants understand 
+    their rights.
+
+    \item \textbf{Confidentiality and Privacy:} Explain measures taken to 
+    protect participants' data and maintain confidentiality. Discuss how data 
+    is stored, who has access, and how anonymity is preserved.
+
+    \item \textbf{Risk Assessment:} Identify potential risks to participants 
+    and outline strategies to minimise them.
+
+    \item \textbf{Vulnerable Populations:} If applicable, address how you will 
+    protect vulnerable groups (e.g., children, elderly, or marginalised 
+    communities) involved in your project.
+
+    \item \textbf{Research Integrity:} Highlight your commitment to honesty 
+    and transparency. Discuss how you will avoid plagiarism, fabrication, 
+    and falsification of data.
+
+    \item \textbf{Compliance with Regulations:} Mention the relevant ethical 
+    guidelines and regulations your project adheres to.
+
+    \item \textbf{Impact on Society:} Reflect on the broader implications of 
+    your project. Discuss how outcomes may affect communities, stakeholders, 
+    or the environment, and how you plan to address any potential negative 
+    consequences.
+
+    \item \textbf{Feedback Mechanisms:} Describe how you incorporate feedback 
+    from participants and stakeholders to improve the ethical conduct of the 
+    project throughout its duration.
+\end{itemize}
+
+% ================================================================
+\section{Example of an Equation in \LaTeX}
+\label{sec:eq_example}
+% ================================================================
+
+Eq.~\eqref{eq:eq_example} is an example of an equation in \LaTeX. 
+In Eq.~\eqref{eq:eq_example}, $s$ is the mean of elements $x_i \in \mathbf{x}$:
+
+\begin{equation}
+\label{eq:eq_example}
+s = \frac{1}{N} \sum_{i = 1}^{N} x_i.
+\end{equation}
+
+Have you noticed that all the variables of the equation are defined using the 
+\textbf{in-text} maths command \$.\$, and Eq.~\eqref{eq:eq_example} is treated 
+as part of the sentence with proper punctuation? Always treat an equation or 
+expression as part of a sentence.
+
+% ================================================================
+\section{Example of a Figure in \LaTeX}
+\label{sec:fig_example}
+% ================================================================
+
+Figure~\ref{fig:chart_a} is an example of a figure in \LaTeX. For more details, 
+check the link:
+\href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{wikibooks.org/wiki/LaTeX/Floats,\_Figures\_and\_Captions}.
+
+\noindent Keep your artwork (graphics, figures, illustrations) clean and 
+readable. At least 300\,dpi is a good resolution for PNG format artwork. 
+However, an SVG format artwork saved as a PDF will produce the best quality 
+graphics. One useful tool is ``Flow algorithm software'': 
+\href{http://www.flowgorithm.org/download/}{flowgorithm.org}.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[scale=0.3]{figures/chart.pdf}
+    \caption{Example figure in \LaTeX.}
+    \label{fig:chart_a}
+\end{figure}
+
+\clearpage
+
+% ================================================================
+\section{Example of an Algorithm in \LaTeX}
+\label{sec:algo_example}
+% ================================================================
+
+Algorithm~\ref{algo:algo_example} is a good example of an algorithm in \LaTeX.
+
+\begin{algorithm}
+    \caption{Example caption: sum of all even numbers}
+    \label{algo:algo_example}
+    \begin{algorithmic}[1]
+        \Require{$\mathbf{x} = x_1, x_2, \ldots, x_N$}
+        \Ensure{$EvenSum$ (Sum of even numbers in $\mathbf{x}$)}
+        \Statex
+        \Function{EvenSummation}{$\mathbf{x}$}
+        \State {$EvenSum \gets 0$}
+        \State {$N \gets length(\mathbf{x})$}
+        \For{$i \gets 1$ to $N$}
+            \If{$x_i \mod 2 == 0$} \Comment{Check whether a number is even.}
+                \State {$EvenSum \gets EvenSum + x_i$}
+            \EndIf
+        \EndFor
+        \State \Return {$EvenSum$}
+        \EndFunction
+    \end{algorithmic}
+\end{algorithm}
+
+% ================================================================
+\section{Example of a Code Snippet in \LaTeX}
+\label{sec:code_example}
+% ================================================================
+
+Code Listing~\ref{list:python_code_ex} is a good example of including a code 
+snippet in a report. While using code snippets, take care of the following:
+\begin{itemize}
+    \item Do not paste your entire implementation. Add code snippets only.
+    \item The algorithm shown in Algorithm~\ref{algo:algo_example} is usually 
+    preferred over code snippets in a technical/scientific report.
+    \item Make sure the entire code snippet or algorithm stays on a single page 
+    and does not overflow to another page.
+\end{itemize}
+
+Here are three examples of code snippets for Python, Java, and C++ illustrated 
+in Listings~\ref{list:python_code_ex}, \ref{list:java_code_ex}, 
+and~\ref{list:cpp_code_ex} respectively.
+
+\begin{lstlisting}[language=Python, 
+    caption={Code snippet in \LaTeX~--- Python example}, 
+    label=list:python_code_ex]
+import numpy as np
+
+x  = [0, 1, 2, 3, 4, 5]       # assign values to an array
+evenSum = evenSummation(x)     # call a function
+
+def evenSummation(x):
+    evenSum = 0
+    n = len(x)
+    for i in range(n):
+        if np.mod(x[i], 2) == 0:  # check if a number is even?
+            evenSum = evenSum + x[i]
+    return evenSum
+\end{lstlisting}
+
+\clearpage
+
+\begin{lstlisting}[language=Java, 
+    caption={Code snippet in \LaTeX~--- Java example}, 
+    label=list:java_code_ex]
+public class EvenSum {
+    public static int evenSummation(int[] x) {
+        int evenSum = 0;
+        int n = x.length;
+        for (int i = 0; i < n; i++) {
+            if (x[i] % 2 == 0) {   // check if a number is even?
+                evenSum = evenSum + x[i];
+            }
+        }
+        return evenSum;
+    }
+    public static void main(String[] args) {
+        int[] x = {0, 1, 2, 3, 4, 5};  // assign values to an array
+        int evenSum = evenSummation(x);
+        System.out.println(evenSum);
+    }
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=C, 
+    caption={Code snippet in \LaTeX~--- C/C++ example}, 
+    label=list:cpp_code_ex]
+int evenSummation(int x[]) {
+    int evenSum = 0;
+    int n = sizeof(x);
+    for (int i = 0; i < n; i++) {
+        if (x[i] % 2 == 0) {   // check if a number is even?
+            evenSum = evenSum + x[i];
+        }
+    }
+    return evenSum;
+}
+
+int main() {
+    int x[] = {0, 1, 2, 3, 4, 5};  // assign values to an array
+    int evenSum = evenSummation(x);
+    cout << evenSum;
+    return 0;
+}
+\end{lstlisting}
+
+% ================================================================
+\section{In-Text Citation Style Guide}
+\label{sec:citation_style}
+% ================================================================
+
+\subsection{Placement and First Reference}
+\label{subsec:refplacement}
+Make sure that whenever you refer to an equation, table, figure, algorithm, 
+or listing for the first time, it also appears on the same page or the 
+following page(s). Always refer to every equation, table, and figure in the 
+text. Do not leave them without an \textbf{in-text citation}.
+
+\subsection{Notation Conventions}
+\label{subsec:refstyle}
+Write \textbf{Eq.} with an uppercase ``E'' for an equation before its number 
+(use \textbackslash eqref\{.\}). Use ``Table'' to refer to a table, ``Figure'' 
+to refer to a figure, ``Algorithm'' to refer to an algorithm, and ``Listing'' 
+to refer to code snippets. Note that we do not use the articles ``a,'' ``an,'' 
+or ``the'' before Eq., Figure, Table, or Listing.
+
+For example: ``A report structure is shown in \textbf{the} 
+Table~\ref{tab:gen_template}'' should be written as ``A report structure is 
+shown \textbf{in} Table~\ref{tab:gen_template}.''
+
+\subsection{Tools for In-Text Referencing}
+\label{subsec:reftools}
+This is enabled by a combination of \verb|\label{}| and \verb|\ref{}| commands. 
+For example: \lstinline!\section{My Section}\label{sec:my}! creates a label 
+that can be referenced with \verb|\ref{sec:my}|.
+
+In-text equation references use: \lstinline!Eq.~\eqref{eq:eq_example}!.
+Alternatively, use the cleverref system: \verb|\Cref{eq:eq_example}| 
+yields \Cref{eq:eq_example}. Lowercase \verb|\cref{fig:chart_a}| yields 
+\cref{fig:chart_a}.
+
+% ================================================================
+% [FIX 4] Summary section: added \label and replaced placeholder text 
+%         with a structured closing paragraph.
+\section{Summary}
+\label{sec:method_summary}
+% ================================================================
+
+% [FIX 4] Original was just: "Write a summary of this chapter."
+This chapter described the methodology adopted in this project. The overall 
+report structure was introduced and three project type templates were presented 
+to guide the reader in adapting it to their needs. The ethical considerations 
+relevant to this project were discussed. The chapter also provided practical 
+\LaTeX~guidance on equations, figures, algorithms, code listings, and 
+in-text referencing conventions. Chapter~\ref{ch:results} presents the results 
+obtained by applying the methodology described here.

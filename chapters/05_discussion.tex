@@ -1,0 +1,208 @@
+% ================================================================
+% CHANGES MADE TO THIS FILE:
+% [FIX 1] Added a proper introductory paragraph at the top of the chapter.
+%         The original jumped straight into the merge/standalone note with 
+%         no opening sentence that frames what the chapter covers.
+% [FIX 2] Removed the loose developer note "Why it matters and what it 
+%         tells you about your design choices" from the Ablation Study 
+%         subsection. This was visible body text in the compiled PDF.
+%         Replaced with a proper introductory sentence for the subsection.
+% [FIX 3] Improved the Summary section — the original was a good template 
+%         but lacked a \label consistent with other chapters and the 
+%         fill-in italic placeholders were not clearly marked as 
+%         student-editable fields. Added explicit [REPLACE THIS] markers.
+% ================================================================
+
+\chapter{Discussion and Analysis}
+\label{ch:evaluation}
+
+% [FIX 1] Added introductory paragraph — was missing in the original.
+This chapter interprets and analyses the results presented in 
+Chapter~\ref{ch:results}. It explains what the findings mean in the context 
+of the research objectives, situates them within the existing literature, 
+and evaluates their significance. The limitations of the project are also 
+discussed, along with directions for future improvement.
+
+\noindent Depending on the type of project you are doing, this chapter can be 
+merged with the ``Results'' chapter as ``Results and Discussion'' as suggested 
+by your supervisor. In the case of software development and standalone 
+applications, describe the significance of the obtained results and the overall 
+performance of the system.
+
+% ================================================================
+\section{Interpretation of Results}
+\label{sec:interpretation}
+% ================================================================
+
+The Discussion and Analysis chapter evaluates and interprets the results 
+presented in Chapter~\ref{ch:results}. Unlike the Results chapter, which reports
+findings objectively, this chapter explains \textit{what the results mean}, 
+\textit{why they occurred}, and \textit{how they relate to the research 
+objectives and existing literature}.
+
+When interpreting your results, consider the following:
+\begin{itemize}
+    \item \textbf{Relate back to objectives:} For each result, explicitly state
+    whether it supports, partially supports, or contradicts the corresponding
+    research objective or hypothesis.
+
+    \item \textbf{Compare with the literature:} Situate your findings within the
+    broader body of knowledge. Do your results agree with or diverge from prior
+    work? If they diverge, propose a reasoned explanation.
+
+    \item \textbf{Explain unexpected outcomes:} If any result was surprising or
+    inconsistent with expectations, discuss possible causes such as data quality,
+    model assumptions, or experimental constraints.
+
+    \item \textbf{Avoid repetition:} Do not simply restate the numbers from the
+    Results chapter. Instead, provide analytical commentary that adds new insight.
+\end{itemize}
+
+\subsection{Interpretation for Algorithm-Based Projects}
+\label{subsec:algo-interpretation}
+
+If your project involves algorithm implementation or evaluation, interpret the
+measured performance in context. For example:
+\begin{itemize}
+    \item Does the achieved accuracy meet the threshold required for the
+    application domain?
+    \item How does the proposed algorithm compare to the baseline in terms of
+    performance, complexity, and scalability?
+    \item Are the gains in accuracy justified given any trade-offs in computational
+    cost or memory usage?
+    \item Do the results generalise across different configurations or datasets,
+    or are they specific to the experimental conditions?
+\end{itemize}
+
+\subsection{Interpretation for Data-Driven Projects}
+\label{subsec:data-interpretation}
+
+If your project addresses research questions over a collected dataset, interpret
+each finding in relation to its corresponding research question:
+\begin{itemize}
+    \item Does the finding provide a clear and direct answer to the research
+    question, or is the evidence only partial?
+    \item Are there patterns, correlations, or trends that were not anticipated
+    in the problem formulation?
+    \item How do the findings contribute to the understanding of the investigated
+    problem beyond what was already known from the literature?
+\end{itemize}
+
+\subsection{Analysis of Ablation Study}
+\label{subsec:ablation-analysis}
+
+% [FIX 2] Removed loose developer note "Why it matters and what it tells you 
+%         about your design choices" — it was visible body text in original.
+%         Replaced with a proper introductory sentence.
+The ablation study results presented in Table~\ref{tab:ablation} provide insight 
+into the individual contribution of each component to the overall performance 
+of the proposed approach. The interpretation below explains what each component's 
+removal reveals about the design choices made.
+
+\begin{itemize}
+    \item \textbf{Component A:} Removing Component A resulted in the largest
+    performance drop, suggesting it plays the most critical role in [describe
+    its function, e.g., feature extraction, regularisation, etc.]. This aligns
+    with [cite relevant work] which similarly reported that [related finding].
+
+    \item \textbf{Component B:} The removal of Component B led to a moderate
+    decline in performance, indicating that while it contributes meaningfully,
+    the model retains partial capability without it. This suggests [interpretation].
+
+    \item \textbf{Component C:} Component C showed the smallest individual
+    impact on performance. However, its combined absence with other components
+    may indicate an interdependency that warrants further investigation.
+\end{itemize}
+
+\noindent Overall, the ablation study confirms that all components contribute
+positively to the proposed approach, and that the full model configuration
+achieves the best trade-off between [metric 1] and [metric 2].
+
+% ================================================================
+\section{Significance of the Findings}
+\label{sec:significance}
+% ================================================================
+
+In this section, discuss the significance of your results and key findings in
+order to enhance the reader's understanding of the investigated problem.
+Significance can be assessed at multiple levels:
+
+\begin{itemize}
+    \item \textbf{Technical significance:} Does the work introduce a novel method,
+    improve an existing approach, or demonstrate a result that advances the
+    technical state of the art? For example, a meaningful improvement in
+    classification accuracy or a reduction in computational complexity may
+    constitute technical significance.
+
+    \item \textbf{Practical significance:} Can the findings be applied in a
+    real-world context? Discuss whether the results are actionable, deployable,
+    or useful for practitioners in the relevant domain.
+
+    \item \textbf{Scientific significance:} Do the findings confirm, challenge,
+    or extend existing theories or models in the field? Even negative results
+    can be scientifically significant if they rule out an assumed relationship
+    or expose a limitation in a widely used method.
+\end{itemize}
+
+\noindent Where applicable, explicitly state how the findings address the gap in
+the literature identified in Chapter~\ref{ch:lit_rev}, and what new knowledge
+this project contributes.
+
+% ================================================================
+\section{Limitations}
+\label{sec:limitations}
+% ================================================================
+
+Every project operates under constraints that may affect the validity,
+generalisability, or completeness of its findings. Acknowledging limitations
+transparently demonstrates critical thinking and scientific maturity. Discuss
+the key limitations of your project under the following aspects:
+
+\begin{itemize}
+    \item \textbf{Data limitations:} Were there constraints on the size,
+    diversity, or quality of the dataset? For instance, a small or imbalanced
+    dataset may limit the generalisability of the results to broader populations
+    or real-world conditions.
+
+    \item \textbf{Methodological limitations:} Are there assumptions underlying
+    your chosen methods that may not hold in all cases? For example, certain
+    algorithms assume linearity, stationarity, or independence of features.
+
+    \item \textbf{Scope limitations:} Were certain aspects of the problem left
+    unexplored due to time, resource, or access constraints? Be explicit about
+    what is outside the scope of this work and why.
+
+    \item \textbf{Evaluation limitations:} Are the chosen evaluation metrics
+    fully representative of real-world performance? For instance, accuracy alone
+    may be misleading in the presence of class imbalance.
+
+    \item \textbf{Reproducibility:} Are there factors in your experimental setup
+    (e.g., randomness, proprietary tools, hardware dependency) that may affect
+    the reproducibility of the results?
+\end{itemize}
+
+\noindent Where relevant, suggest potential improvements or directions that could
+address these limitations in future work. This naturally transitions into the
+recommendations discussed in Chapter~\ref{ch:con}.
+
+% ================================================================
+% [FIX 3] Summary: added \label consistent with other chapters and 
+%         made fill-in placeholders clearly marked for students.
+\section{Summary}
+\label{sec:discussion-summary}
+% ================================================================
+
+This chapter provided an analytical interpretation of the results presented in
+Chapter~\ref{ch:results}. The key findings were examined in relation to the
+project objectives, situated within the existing literature, and assessed for
+their technical, practical, and scientific significance. The ablation study was
+analysed to evaluate the contribution of individual components to the overall
+system performance. The main limitations of the project were also identified and
+discussed, along with potential directions for improvement.
+
+% [FIX 3] Made the fill-in sentence more explicit for students.
+Overall, the results \textit{[REPLACE: support / partially support / challenge]}
+the initial research objectives by demonstrating that \textit{[REPLACE: insert 
+a one or two sentence summary of the core finding here]}. 
+The following chapter presents the conclusions drawn from this work and outlines 
+recommendations for future research.

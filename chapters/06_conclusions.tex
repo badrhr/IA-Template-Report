@@ -1,0 +1,129 @@
+% ================================================================
+% CHANGES MADE TO THIS FILE:
+% [FIX 1] Added a proper introductory paragraph at the top of the chapter.
+%         The original had no opening paragraph — it jumped directly into 
+%         the Conclusions section with no framing sentence.
+% [FIX 2] Added a structured skeleton to \section{Conclusions}. The original 
+%         only had prose guidance with no template for students to follow. 
+%         Added clearly marked [REPLACE THIS] paragraph blocks so students 
+%         know exactly what to write in each part.
+% [FIX 3] Fixed incorrect cross-reference in \section{Future Work}. 
+%         The original referenced Chapter~\ref{ch:results} but future work 
+%         should refer to the Limitations section in the Discussion chapter 
+%         (Chapter~\ref{ch:evaluation}), not the Results chapter.
+% [FIX 4] Added a structured skeleton to \section{Future Work} matching 
+%         the same treatment applied to Conclusions in [FIX 2].
+% [FIX 5] Added \section{Summary} which was completely absent. Every other 
+%         chapter ends with a Summary — this was the only chapter without one.
+% ================================================================
+
+\chapter{Conclusions and Future Work}
+\label{ch:con}
+
+% [FIX 1] Added introductory paragraph — was completely missing in original.
+This chapter brings the report to a close. Section~\ref{sec:conclusions} 
+summarises the project's key contributions and findings in relation to the 
+stated aims and objectives. Section~\ref{sec:future_work} outlines directions 
+for future work that build on the results and limitations identified in 
+Chapter~\ref{ch:evaluation}.
+
+% ================================================================
+% [FIX 2] Added structured skeleton to Conclusions section.
+\section{Conclusions}
+\label{sec:conclusions}
+% ================================================================
+
+% Guidance: A conclusions chapter first summarises the investigated problem 
+% and its aims and objectives, then summarises the critical findings, and 
+% finally draws out the central contributions and achievements of the project.
+% Aim for approximately 300--500 words. This is one of the last things you 
+% write in your report (along with the Abstract).
+
+% --- Paragraph 1: Restate the problem and objectives ---
+% [FIX 2] New structured template below. Replace all [REPLACE THIS] blocks.
+This project investigated \textit{[REPLACE: state the problem that was 
+investigated]}. The main aim was to \textit{[REPLACE: restate the aim]}, 
+with the following objectives: \textit{[REPLACE: briefly list the objectives]}.
+
+% --- Paragraph 2: Summary of methodology ---
+To achieve these objectives, \textit{[REPLACE: briefly describe the methods, 
+algorithms, or tools applied and the experimental setup used]}.
+
+% --- Paragraph 3: Summary of key findings ---
+The key findings of this project are as follows:
+\begin{itemize}
+    \item \textit{[REPLACE: State the finding related to Objective 1 and 
+    whether it was achieved.]}
+    \item \textit{[REPLACE: State the finding related to Objective 2 and 
+    whether it was achieved.]}
+    \item \textit{[REPLACE: State the finding related to Objective 3 and 
+    whether it was achieved.]}
+\end{itemize}
+
+% --- Paragraph 4: Central contribution ---
+Overall, the central contribution of this project is \textit{[REPLACE: state 
+the most significant achievement or contribution of the work]}. The results 
+demonstrate that \textit{[REPLACE: summarise the most important result and 
+its implication]}.
+
+\noindent\textit{A good conclusions summary is approximately 300--500 words. 
+Remove this note before submitting.}
+
+% ================================================================
+\section{Future Work}
+\label{sec:future_work}
+% ================================================================
+
+% [FIX 3] Fixed cross-reference: was \ref{ch:results}, now \ref{ch:evaluation}.
+%         Future work stems from limitations (Discussion ch.), not raw Results.
+% [FIX 4] Added structured skeleton matching the Conclusions section above.
+
+% Guidance: Discuss future work in technical terms based on what was not yet 
+% achieved, what you learned, and what could realistically be built on top 
+% of the completed work. Aim for approximately 300--500 words.
+
+The limitations identified in Chapter~\ref{ch:evaluation} suggest several 
+directions for future investigation. The following areas represent the most 
+promising avenues for extending this work:
+
+% --- Short-term future work ---
+\begin{itemize}
+    \item \textbf{[REPLACE: Short-term improvement 1]:} \textit{[REPLACE: 
+    Describe a concrete, achievable improvement that directly addresses a 
+    limitation identified in the Discussion chapter, e.g., increasing the 
+    dataset size, testing on additional benchmarks, tuning hyperparameters.]}
+
+    \item \textbf{[REPLACE: Short-term improvement 2]:} \textit{[REPLACE: 
+    Describe a second near-term improvement or extension.]}
+\end{itemize}
+
+% --- Longer-term future directions ---
+In the longer term, the following research directions could build on the 
+outcomes of this project:
+\begin{itemize}
+    \item \textbf{[REPLACE: Long-term direction 1]:} \textit{[REPLACE: 
+    Describe a broader research direction that this project opens up, 
+    e.g., applying the method to a different domain, integrating it into 
+    a larger system, or combining it with a complementary technique.]}
+
+    \item \textbf{[REPLACE: Long-term direction 2]:} \textit{[REPLACE: 
+    Describe a second longer-term direction.]}
+\end{itemize}
+
+\noindent\textit{A good future work summary is approximately 300--500 words. 
+Remove this note before submitting.}
+
+% ================================================================
+% [FIX 5] Added \section{Summary} — was completely absent from this chapter.
+%         Every other chapter ends with a Summary section.
+\section{Summary}
+\label{sec:con_summary}
+% ================================================================
+
+% [FIX 5] This section did not exist in the original file at all.
+This chapter concluded the project by summarising the key findings in relation 
+to the stated aims and objectives, and by identifying the main contributions 
+of this work. Directions for future research were also proposed, grounded in 
+the limitations discussed in Chapter~\ref{ch:evaluation}. 
+Chapter~\ref{ch:reflection} provides a personal reflection on the project 
+experience.
